@@ -435,7 +435,9 @@ jQuery.extend({
 				// Execute all of them
 				var fn, i = 0;
 				while ( (fn = readyList[ i++ ]) ) {
-					fn.call( document, jQuery );
+          if (fn !== jQuery) {
+            fn.call( document, jQuery );
+          }
 				}
 
 				// Reset the list of functions

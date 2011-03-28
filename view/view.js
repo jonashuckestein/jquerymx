@@ -20,7 +20,7 @@ steal.plugins("jquery").then(function( $ ) {
 	 * 
 	 *  - Use views with jQuery extensions [jQuery.fn.after after], [jQuery.fn.append append],
 	 *   [jQuery.fn.before before], [jQuery.fn.html html], [jQuery.fn.prepend prepend],
-	 *      [jQuery.fn.replace replace], [jQuery.fn.replaceWith replaceWith], [jQuery.fn.text text].
+	 *   [jQuery.fn.replaceWith replaceWith], [jQuery.fn.text text].
 	 *  - Template loading from html elements and external files.
 	 *  - Synchronous and asynchronous template loading.
 	 *  - Template caching.
@@ -57,7 +57,6 @@ steal.plugins("jquery").then(function( $ ) {
 	 * <tr><td>[jQuery.fn.after before] </td><td> <code>$('#bar').before('temp.jaml',{});</code></td></tr>
 	 * <tr><td>[jQuery.fn.after html] </td><td> <code>$('#bar').html('temp.jaml',{});</code></td></tr>
 	 * <tr><td>[jQuery.fn.after prepend] </td><td> <code>$('#bar').prepend('temp.jaml',{});</code></td></tr>
-	 * <tr><td>[jQuery.fn.after replace] </td><td> <code>$('#bar').replace('temp.jaml',{});</code></td></tr>
 	 * <tr><td>[jQuery.fn.after replaceWith] </td><td> <code>$('#bar').replaceWidth('temp.jaml',{});</code></td></tr>
 	 * <tr><td>[jQuery.fn.after text] </td><td> <code>$('#bar').text('temp.jaml',{});</code></td></tr>
 	 * </table>
@@ -529,12 +528,6 @@ steal.plugins("jquery").then(function( $ ) {
 	 */
 	"before",
 	/**
-	 *  @function replace
-	 *  @parent jQuery.View
-	 *  abc
-	 */
-	"replace",
-	/**
 	 *  @function text
 	 *  @parent jQuery.View
 	 *  abc
@@ -551,7 +544,8 @@ steal.plugins("jquery").then(function( $ ) {
 	 *  @parent jQuery.View
 	 *  abc
 	 */
-	"replaceWith"];
+	"replaceWith", 
+	"val"];
 
 	//go through helper funcs and convert
 	for ( var i = 0; i < funcs.length; i++ ) {
